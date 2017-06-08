@@ -1,0 +1,46 @@
+x y DIR
+        N 
+    W       E
+        S
+5
+4
+3
+2
+1
+0 1 2 3 4 5
+
+P: turn 90˚ to port (L)
+S: turn 90˚ to starboard (R)
+F: move forward one box; maintain heading
+
+Input
+    - first line: upper-right coordinates (0,0 is LL)
+    - Ducks
+        - first line: initial pos and heading
+        - second line: instructions for moving
+Output 
+    - one line for each duck: final coords and heading 
+
+--------
+
+Approach:
+    - divide input by '\n'
+        - [grid, initialCoord, instructions]
+    - variables: x, y, heading, xMax, yMax
+        - initialize with arr[1]    // convert to Number()
+        - only move on F:   // SWITCH CASE!!
+            if (heading === 'N' && y < yMax) y += 1;  // acct for edges
+            if (heading === 'S') y -= 1;
+            if (heading === 'W') x -= 1;
+            if (heading === 'E') x += 1;
+        - change heading 
+            - have a changeHeading(dir) fxn
+            - ['N', 'E', 'S', 'W']
+                - L to R: 'S'
+                - R to L: 'P'
+                - USE A MODULO!!
+
+Edge cases:
+    - duck hits the edge of the pond w/ instructions to move fwd
+        - just have him spin
+    - ducks bumping into each other
