@@ -9,11 +9,6 @@ function modulo(currIdx, len, dir) {
     default:
       console.log('Invalid direction!');
   }
-  // if (dir !== 'P' || dir !== 'S') return;  // could test for F here!!
-  // dir === 'S'
-  //   ? currIdx = (currIdx + 1) % len;
-  //   : currIdx = ((currIdx + len) - 1) % len;
-
   return currIdx;
 }
 

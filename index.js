@@ -9,6 +9,6 @@ inputArr = inputArr.map(elem => elem.split(' '));
 
 const xMax = Number(inputArr[0][0]);
 const yMax = Number(inputArr[0][1]);
-const ducksArr = inputArr.slice(1);
+const ducksArr = inputArr.slice(1); // [['1','2','N'],['PFPFPFPFF']]
 
 let DuckPond = new Pond(xMax, yMax, ducksArr);
