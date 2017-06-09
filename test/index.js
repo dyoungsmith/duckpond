@@ -1,7 +1,9 @@
 const chai = require('chai');
 const expect = chai.expect;
-const modulo = require('../utils/modulo.js');
 
+const modulo = require('../utils/modulo.js');
+const Pond = require('../components/Pond.js');
+const Duck = require('../components/Duck.js');
 
 const TEST_INPUT = '5 5\n1 2 N\nPFPFPFPFF\n3 3 E\nFFSFFSFSSF';
 const TEST_OUTPUT = '1 3 N\n5 1 E';
@@ -28,4 +30,12 @@ describe('Modulo function', () => {
         currIdx = modulo(currIdx, directions.length, 'S');
         expect(currIdx).to.be.equal(0);
     });
+});
+
+describe('Pond Class', () => {
+    console.log('coming soon to Ponds near you!');
+});
+
+describe('Duck Class', () => {
+    console.log('Quack attack!');
 });
