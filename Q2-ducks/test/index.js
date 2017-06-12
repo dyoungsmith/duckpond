@@ -5,8 +5,8 @@ const modulo = require('../utils/modulo.js');
 const Pond = require('../components/Pond.js');
 const Duck = require('../components/Duck.js');
 
-const TEST_INPUT = '5 5\n1 2 N\nPFPFPFPFF\n3 3 E\nFFSFFSFSSF';
-const TEST_OUTPUT = '1 3 N\n5 1 E';
+// const TEST_INPUT = '5 5\n1 2 N\nPFPFPFPFF\n3 3 E\nFFSFFSFSSF';
+// const TEST_OUTPUT = '1 3 N\n5 1 E';
 
 describe('Modulo function', () => {
     let currIdx = 0;
